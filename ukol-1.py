@@ -1,4 +1,3 @@
-kod = input('Zadejte kod baliku: ')
 
 baliky = {
     "B541X": True,
@@ -8,8 +7,12 @@ baliky = {
     "B947X": False,
 }
 
+kod = input('Zadejte kod baliku: ')
+
 if kod in baliky:
-    kod == True
-    print('Balík byl předán kurýrovi')
+    if True == baliky[kod]:
+        print(f'Balík {kod} byl předán kurýrovi')
+    else:
+        print(f'Balík {kod} zatím nebyl předán kurýrovi')
 else:
-    print('Balík zatím nebyl předán kurýrovi')
+    print('Balík neni v seznamu.')
