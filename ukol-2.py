@@ -506,21 +506,3 @@ if len(result) == 0:           #...pokud je list prazdny
 else:                          #...jinak
     for stat in result:        #...pro kazdy stat ve vysledku
         print(stat['name'])    #...vypis jeho jmeno
-
-
-
-
-
-
-
-
-
-
-'''
-u 2 neni uveden region
-i['region'] == None:
-    print('Neni uveden region')
-    '''
-
-
- 
