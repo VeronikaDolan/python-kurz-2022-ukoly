@@ -49,7 +49,7 @@ teploty = [
 #    x = sum(teplota)
 #    print(x)
 
-print([sum(teplota) for teplota in teploty]) # seznam průměrných teplot pro každý den
+print([mean(teplota) for teplota in teploty]) # seznam průměrných teplot pro každý den
 print([teplota[0] for teplota in teploty]) # seznam ranních teplot.
 print([teplota[-1] for teplota in teploty]) #seznam nočních teplot.
 print([[teplota[1], teplota[-1]] for teplota in teploty]) # seznam dvouprvkových seznamů obsahujících pouze polední a noční teplotu
