@@ -8,16 +8,16 @@ with open('znamky_za_semestr.csv', newline='') as input:
     for row in reader:
         students.append(row)
     # nebo jako list comprehension: line = [students.append(row) for row in reader]
-print(students) #kontrola dat
+
+    for students in reader:
+        print(students) #kontrola dat
 
 # uprava dat ze souboru
-for grade in students:  #nahrazeni cisel za pismena
-    grade['Test 1'] = grade['Test 1'].replace('1', 'A').replace('2', 'B').replace('3', 'C').replace('4', 'D').replace('5', 'E')
-    grade['Test 2'] = grade['Test 2'].replace('1', 'A').replace('2', 'B').replace('3', 'C').replace('4', 'D').replace('5', 'E')
-    grade['Test 3'] = grade['Test 3'].replace('1', 'A').replace('2', 'B').replace('3', 'C').replace('4', 'D').replace('5', 'E')
-    grade['Test 4'] = grade['Test 4'].replace('1', 'A').replace('2', 'B').replace('3', 'C').replace('4', 'D').replace('5', 'E')
-    grade['Test 5'] = grade['Test 5'].replace('1', 'A').replace('2', 'B').replace('3', 'C').replace('4', 'D').replace('5', 'E')
-    grade['Test 6'] = grade['Test 5'].replace('1', 'A').replace('2', 'B').replace('3', 'C').replace('4', 'D').replace('5', 'E')
+
+for student in students:  #nahrazeni cisel za pismena
+    for key in student.keys():
+        if key.startswith('Test'):
+            student[key] = student[key].replace('1', 'A').replace('2', 'B').replace('3', 'C').replace('4', 'D').replace('5', 'E')
 print(students) #kontrola dat
 
 
